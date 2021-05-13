@@ -14,7 +14,10 @@
 			text-align: center;
 		}
 	</style>
+
 	<body>
+		<!-- Basic web presentation -->
+
 		<img src="./Images/TunersLogo.png" style="text-align: center" />
 
 		<div class="slideshow-container">
@@ -56,7 +59,17 @@
 			<option value="Subaru">Nissan</option>
 		</select>
 
+		<br />
+
+		<!-- End of basic web presentation  -->
+
+		<!-- Start of Chat bot area -->
+		<iframe id="chat" style="width: 400px; height: 400px" src=""></iframe>
+
+		<!-- End of chat bot area  -->
+
 		<script>
+			// Javascript component for slideshow
 			var slideIndex = 0;
 			showSlides();
 
@@ -78,6 +91,28 @@
 				dots[slideIndex - 1].className += " active";
 				setTimeout(showSlides, 5000); // Change image every 5 seconds
 			}
+
+			// End of slideshow componenet
+
+			// Start of chatbot script
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "https://webchat.botframework.com/api/tokens", true);
+			xhr.setRequestHeader(
+				"Authorization",
+				"BotConnector " + "YOUR SECRET HERE"
+			);
+			xhr.send();
+			xhr.onreadystatechange = processRequest;
+
+			function processRequest(e) {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var response = JSON.parse(xhr.responseText);
+					document.getElementById("chat").src =
+						"https://webchat.botframework.com/embed/<botname>?t=" + response;
+				}
+			}
+
+			// End of chatbot script
 		</script>
 	</body>
 </html>
