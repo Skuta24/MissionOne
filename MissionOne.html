@@ -1,4 +1,83 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tuners Cars</title>
+	</head>
+
+	<style>
+		body {
+			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+				sans-serif;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<img src="./Images/TunersLogo.png" style="text-align: center" />
+
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img
+					src="./Images/SubaruGDB.jpg"
+					height="15%"
+					width="50%"
+					style="text-align: center"
+				/>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="./Images/SubaruGRB.jpg" height="15%" width="50%" />
+			</div>
+
+			<div class="mySlides fade">
+				<img src="./Images/Evo.jpg" height="15%" width="50%" />
+			</div>
+		</div>
+		<br />
+
+		<div style="text-align: center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+
+		<br />
+
+		<label for="cars">Choose a car:</label>
+		<select name="cars" id="cars">
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="opel">Opel</option>
+			<option value="audi">Audi</option>
+			<option value="mitsubishi">Mitsubishi</option>
+			<option value="Subaru">Subaru</option>
+			<option value="Subaru">Nissan</option>
+		</select>
+
+		<script>
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {
+					slideIndex = 1;
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+				setTimeout(showSlides, 5000); // Change image every 5 seconds
+			}
+		</script>
+	</body>
 </html>
