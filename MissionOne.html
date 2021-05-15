@@ -22,12 +22,7 @@
 
 		<div class="slideshow-container">
 			<div class="mySlides fade">
-				<img
-					src="./Images/SubaruGDB.jpg"
-					height="15%"
-					width="50%"
-					style="text-align: center"
-				/>
+				<img src="./Images/SubaruGDB.jpg" height="15%" width="50%" />
 			</div>
 
 			<div class="mySlides fade">
@@ -40,14 +35,6 @@
 		</div>
 		<br />
 
-		<div style="text-align: center">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-		</div>
-
-		<br />
-
 		<label for="cars">Choose a car:</label>
 		<select name="cars" id="cars">
 			<option value="volvo">Volvo</option>
@@ -56,15 +43,18 @@
 			<option value="audi">Audi</option>
 			<option value="mitsubishi">Mitsubishi</option>
 			<option value="Subaru">Subaru</option>
-			<option value="Subaru">Nissan</option>
+			<option value="Nissan">Nissan</option>
 		</select>
 
 		<br />
-
+		<br />
 		<!-- End of basic web presentation  -->
 
 		<!-- Start of Chat bot area -->
-		<iframe id="chat" style="width: 400px; height: 400px" src=""></iframe>
+		<iframe
+			src="https://webchat.botframework.com/embed/MissionReadyChatBot?s=J6FXU_36Uxk.Ota4NibcK3RgDeA925AKRb7ejXZfgDA0iQrpxumNNQA"
+			style="max-width: 300px; width: 100%; min-height: 500px"
+		></iframe>
 
 		<!-- End of chat bot area  -->
 
@@ -95,22 +85,22 @@
 			// End of slideshow componenet
 
 			// Start of chatbot script
-			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "https://webchat.botframework.com/api/tokens", true);
-			xhr.setRequestHeader(
-				"Authorization",
-				"BotConnector " + "YOUR SECRET HERE"
-			);
-			xhr.send();
-			xhr.onreadystatechange = processRequest;
+			// var xhr = new XMLHttpRequest();
+			// xhr.open("GET", "https://webchat.botframework.com/api/tokens", true);
+			// xhr.setRequestHeader(
+			// 	"Authorization",
+			// 	"BotConnector " + "YOUR SECRET HERE"
+			// );
+			// xhr.send();
+			// xhr.onreadystatechange = processRequest;
 
-			function processRequest(e) {
-				if (xhr.readyState == 4 && xhr.status == 200) {
-					var response = JSON.parse(xhr.responseText);
-					document.getElementById("chat").src =
-						"https://webchat.botframework.com/embed/<botname>?t=" + response;
-				}
-			}
+			// function processRequest(e) {
+			// 	if (xhr.readyState == 4 && xhr.status == 200) {
+			// 		var response = JSON.parse(xhr.responseText);
+			// 		document.getElementById("chat").src =
+			// 			"https://webchat.botframework.com/embed/<botname>?t=" + response;
+			// 	}
+			// }
 
 			// End of chatbot script
 		</script>
