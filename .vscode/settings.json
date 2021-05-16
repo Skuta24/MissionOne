@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1e7cce36-2717-4ee3-b691-22be023d5128/resourceGroups/BotServices/providers/Microsoft.Web/sites/missionreadychatbot",
+    "appService.deploySubpath": "ChatBotSourceCode"
+}

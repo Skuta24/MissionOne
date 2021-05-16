@@ -4,16 +4,123 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title class='heads' style='margin: 50px 0px;'>Tuners Cars</title>
-		
-		<div class='header' style='width: 100vw; height: 50px; background-color: #0076b9; position: absolute; margin: none;'>
-			<button class='b1' style='color: white; margin: 20px 40px 0px 0px; padding: none; cursor: pointer; background: none; border: none; align-self: center; font-size: 16px;'>Find a Car</button>
-			<button class='b2' style='color: white; margin: 20px 40px 0px 0px; padding: none; cursor: pointer; background: none; border: none; align-self: center; font-size: 16px;'>How to Buy</button>
-			<button class='b3' style='color: white; margin: 20px 40px 0px 0px; padding: none; cursor: pointer; background: none; border: none; align-self: center; font-size: 16px;'>Sell your Car</button>
-			<button class='b4' style='color: white; margin: 20px 40px 0px 0px; padding: none; cursor: pointer; background: none; border: none; align-self: center; font-size: 16px;'>Finance & Insurance</button>
-			<button class='b5' style='color: white; margin: 20px 40px 0px 0px; padding: none; cursor: pointer; background: none; border: none; align-self: center; font-size: 16px;'>Careers</button>
-			<button class='b6' style='color: white; margin: 20px 40px 0px 0px; padding: none; cursor: pointer; background: none; border: none; align-self: center; font-size: 16px;'>Auctions & Events</button>
-			<button class='b7' style='color: white; margin: 20px 40px 0px 0px; padding: none; cursor: pointer; background: none; border: none; align-self: center; font-size: 16px;'>Services and Information</button>
+		<title class="heads" style="margin: 50px 0px">Tuners Cars</title>
+
+		<div
+			class="header"
+			style="
+				width: 100vw;
+				height: 50px;
+				background-color: #0076b9;
+				position: absolute;
+				margin: none;
+			"
+		>
+			<button
+				class="b1"
+				style="
+					color: white;
+					margin: 20px 40px 0px 0px;
+					padding: none;
+					cursor: pointer;
+					background: none;
+					border: none;
+					align-self: center;
+					font-size: 16px;
+				"
+			>
+				Find a Car
+			</button>
+			<button
+				class="b2"
+				style="
+					color: white;
+					margin: 20px 40px 0px 0px;
+					padding: none;
+					cursor: pointer;
+					background: none;
+					border: none;
+					align-self: center;
+					font-size: 16px;
+				"
+			>
+				How to Buy
+			</button>
+			<button
+				class="b3"
+				style="
+					color: white;
+					margin: 20px 40px 0px 0px;
+					padding: none;
+					cursor: pointer;
+					background: none;
+					border: none;
+					align-self: center;
+					font-size: 16px;
+				"
+			>
+				Sell your Car
+			</button>
+			<button
+				class="b4"
+				style="
+					color: white;
+					margin: 20px 40px 0px 0px;
+					padding: none;
+					cursor: pointer;
+					background: none;
+					border: none;
+					align-self: center;
+					font-size: 16px;
+				"
+			>
+				Finance & Insurance
+			</button>
+			<button
+				class="b5"
+				style="
+					color: white;
+					margin: 20px 40px 0px 0px;
+					padding: none;
+					cursor: pointer;
+					background: none;
+					border: none;
+					align-self: center;
+					font-size: 16px;
+				"
+			>
+				Careers
+			</button>
+			<button
+				class="b6"
+				style="
+					color: white;
+					margin: 20px 40px 0px 0px;
+					padding: none;
+					cursor: pointer;
+					background: none;
+					border: none;
+					align-self: center;
+					font-size: 16px;
+				"
+			>
+				Auctions & Events
+			</button>
+			<button
+				class="b7"
+				style="
+					color: white;
+					margin: 20px 40px 0px 0px;
+					padding: none;
+					cursor: pointer;
+					background: none;
+					border: none;
+					align-self: center;
+					font-size: 16px;
+				"
+			>
+				Services and Information
+			</button>
 		</div>
 	</head>
 
@@ -22,6 +129,45 @@
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 				sans-serif;
 			text-align: center;
+		}
+
+		.dot {
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+		}
+
+		.active {
+			background-color: #717171;
+		}
+
+		.fade {
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1.5s;
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+			from {
+				opacity: 0.4;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fade {
+			from {
+				opacity: 0.4;
+			}
+			to {
+				opacity: 1;
+			}
 		}
 	</style>
 
@@ -43,6 +189,14 @@
 				<img src="./Images/Evo.jpg" height="15%" width="50%" />
 			</div>
 		</div>
+		<br />
+
+		<div style="text-align: center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+
 		<br />
 
 		<label for="cars">Choose a car:</label>
@@ -89,7 +243,7 @@
 				}
 				slides[slideIndex - 1].style.display = "block";
 				dots[slideIndex - 1].className += " active";
-				setTimeout(showSlides, 5000); // Change image every 5 seconds
+				setTimeout(showSlides, 6000); // Change image every 6 seconds
 			}
 
 			// End of slideshow componenet
