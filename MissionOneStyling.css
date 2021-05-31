@@ -5,6 +5,10 @@ body {
 	padding: 0;
 }
 
+.bcs-host-div {
+	max-width: 40%;
+}
+
 .TopBlueNavContainer a {
 	color: white;
 	/* margin: 40px 40px 0px 0px; */
