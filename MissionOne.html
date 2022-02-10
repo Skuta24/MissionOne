@@ -53,7 +53,7 @@
 
 				<i class="fa fa-map-marker"></i>
 				<li>Find Us</li>
-				<li style="color: #b71234; font-weight: bold">中文</li>
+				<li style="color: #b71234; font-weight: bold">Chur whanau</li>
 			</div>
 		</div>
 
@@ -82,19 +82,19 @@
 		<div class="MainBody">
 			<div class="slideshow-container">
 				<div class="mySlides fade">
-					<img src="./Images/SubaruGDB.jpg" height="100%" width="100%" />
+					<img src="./Images/Profile.jpg" height="100%" width="60%" />
 				</div>
 
 				<div class="mySlides fade">
-					<img src="./Images/SubaruGRB.jpg" height="100%" width="100%" />
+					<img src="./Images/Profile.jpg" height="100%" width="60%" />
 				</div>
 
 				<div class="mySlides fade">
-					<img src="./Images/Evo.jpg" height="100%" width="100%" />
+					<img src="./Images/Mustang.gif" height="100%" width="100%" />
 				</div>
 
 				<div class="mySlides fade">
-					<img src="./Images/AlansFace.png" height="100%" width="100%" />
+					<img src="./Images/Profile.jpg" height="100%" width="60%" />
 				</div>
 				<div style="text-align: center">
 					<span class="dot"></span>
@@ -119,18 +119,19 @@
 
 			<!-- Start of Chat bot area -->
 			<div class="ChatBotSection">
-				＼(￣▽￣)／ Ask TurnersBot a question! o(≧▽≦)o
-
-				<iframe
-					title="Chat Bot"
-					src="https://webchat.botframework.com/embed/MissionReadyChatBotV4?s=3qFAQ6OTXiQ.immGqtdD4u0-3KBjq9wUXKocFdwCcKcsc3i24xg1Yyg"
-					style="max-width: 400px; width: 100%; min-height: 500px"
-				>
-				</iframe>
-				<img
-					src="/Images/OtaconSpritgif.gif"
-					style="width: 80px; height: 80px"
-				/>
+				<script>
+					window.watsonAssistantChatOptions = {
+					  integrationID: "055faa3d-b0da-42c7-9016-0ad4c25468b9", // The ID of this integration.
+					  region: "au-syd", // The region your integration is hosted in.
+					  serviceInstanceID: "01c7598e-1fe7-4875-bfa8-f94d96bfe067", // The ID of your service instance.
+					  onLoad: function(instance) { instance.render(); }
+					};
+					setTimeout(function(){
+					  const t=document.createElement('script');
+					  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+					  document.head.appendChild(t);
+					});
+				  </script>
 			</div>
 		</div>
 
@@ -144,15 +145,7 @@
 			</div>
 
 			<div class="ChatBotSection">
-				＼(￣▽￣)／ Turners Baby LUIS o(≧▽≦)o
-				<iframe
-					src="https://webchat.botframework.com/embed/MissionReadyLuisTurners?s=6wIRW_vcwMA.FNWrKoJCFudXsrn2j5aArUhg570iJ4TffZUNIiLt8bU"
-					style="max-width: 400px; width: 100%; min-height: 500px"
-				></iframe>
-				<img
-					src="/Images/OtaconSpritgif.gif"
-					style="width: 80px; height: 80px"
-				/>
+			
 			</div>
 		</div>
 
@@ -203,7 +196,7 @@
 							>Trucks Finance</a
 						>
 						<a href="https://www.turners.co.nz/Finance/car-insurance/"
-							>Fiancial Information</a
+							>Financial Information</a
 						>
 					</div>
 
